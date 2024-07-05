@@ -1,0 +1,16 @@
+<h2 class="mt-5">List Item</h2>
+<ul class="list-group">
+    <li *ngFor="let item of paginatedData; let srNo = index" (click)="getDetail(item)">
+        <a href="javascript:void(0)" class="list-group-item"><strong>Item {{item.id}}</strong><br /> {{
+            item.title }}</a>
+    </li>
+</ul>
+
+<div class="pagination my-3">
+    <button (click)="previousPage()" [disabled]="currentPage === 1" class="btn btn-dark">Previous</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages()" class="btn btn-dark mx-2">Next</button>
+</div>
+
+<div *ngIf="detailData?.title">
+    <app-item-detail class="mt-2" [detailData]="detailData"></app-item-detail>
+</div>

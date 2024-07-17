@@ -1,0 +1,139 @@
+{
+  "students": [
+    {
+      "studentName": "Altaf Ansari",
+      "studentEmail": "altaf@gmail.com",
+      "studentBranch": "mca",
+      "id": "8496"
+    },
+    {
+      "studentName": "Chandan Kumar Singh",
+      "studentEmail": "chandan@gmail.com",
+      "studentBranch": "mca",
+      "id": "e9d8"
+    },
+    {
+      "id": "139c",
+      "studentName": "Mohit",
+      "studentEmail": "mohit@gmail.com",
+      "studentBranch": "bca"
+    },
+    {
+      "id": "d565",
+      "studentName": "Kunal",
+      "studentEmail": "kunal@gmail.com",
+      "studentBranch": "mba"
+    },
+    {
+      "id": "10b6",
+      "studentName": "Sunil",
+      "studentEmail": "sunil@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "a9dc",
+      "studentName": "Kuldeep",
+      "studentEmail": "kuldeep@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "36f1",
+      "studentName": "Naman",
+      "studentEmail": "naman@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "97f3",
+      "studentName": "Ravi",
+      "studentEmail": "ravi@gmail.com",
+      "studentBranch": "bca"
+    },
+    {
+      "id": "1be5",
+      "studentName": "Hari Om",
+      "studentEmail": "hari@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "fb0b",
+      "studentName": "Krishan",
+      "studentEmail": "karishan@gmail.com",
+      "studentBranch": "mca"
+    },
+    {
+      "id": "6ef1",
+      "studentName": "Kumar",
+      "studentEmail": "kumar@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "050d",
+      "studentName": "Ashwani",
+      "studentEmail": "ashwani@gmail.com",
+      "studentBranch": "mca"
+    },
+    {
+      "id": "59a3",
+      "studentName": "Kanak",
+      "studentEmail": "kanak@gmail.com",
+      "studentBranch": "bca"
+    },
+    {
+      "id": "3f26",
+      "studentName": "Neha",
+      "studentEmail": "neha@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "9631",
+      "studentName": "Rishi",
+      "studentEmail": "rishi@gmail.com",
+      "studentBranch": "mca"
+    },
+    {
+      "id": "6575",
+      "studentName": "Tanveer",
+      "studentEmail": "tanveer@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "af70",
+      "studentName": "Tej",
+      "studentEmail": "tej@gmail.com",
+      "studentBranch": "btech"
+    },
+    {
+      "id": "c517",
+      "studentName": "Anurag",
+      "studentEmail": "anurag@gmail.com",
+      "studentBranch": "btech"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

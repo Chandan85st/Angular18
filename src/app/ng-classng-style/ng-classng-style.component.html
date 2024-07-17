@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card p-5" [ngClass]="bgColor">Angular</div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card p-5" [ngClass]="isActive ? 'bg-warning' : ''">React Js</div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card p-5" [ngClass]="(num1 === num2) ? 'bg-secondary' : 'bg-danger'">Vew Js</div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card p-5" [ngClass]="isChecked ? 'bg-primary' : 'bg-warning'">Node Js</div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-3">
+        <button class="btn bg-danger" (click)="addRedClass()">Apply Red</button>
+        <button class="btn bg-primary mx-1" (click)="addBlueClass()">Apply Blue</button>
+    </div>
+    <div class="col-sm-3">
+        <button class="btn bg-warning mx-1" (click)="toggleColor()">Toggle</button>
+    </div>
+    <div class="col-sm-3 d-flex">
+        <input type="text" [(ngModel)]="num1" style="flex: 1; width: 50%;">
+        <input type="text" [(ngModel)]="num2" style="flex: 1; width: 50%;">
+    </div>
+    <div class="col-sm-3">
+        <input type="checkbox" (click)="onChecked()" />
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <table class="table table-borderd table stripe">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Total Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList">
+                    <td>{{student.studId}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.gender}}</td>
+                    <td>{{student.city}}</td>
+                    <td [ngStyle]="{'background-color': student.status ? 'yellow' : 'red' }">{{student.status ? 'active'
+                        :
+                        'Deactive'}}</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [ngStyle]="{'width': student.totalMarks+ '%' }"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{student.totalMarks}}%</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div [ngStyle]="customStyle">Hello</div>

@@ -1,0 +1,19 @@
+section {
+    padding: 20px;
+    box-shadow: 0 0 5px #ccc;
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 20% auto 0;
+    background-color: #f8f8f8;
+
+    input {
+        width: 100%;
+    }
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,23 @@
+<section>
+    <form (ngSubmit)="onSubmit()">
+        <div class="d-flex">
+            <div>
+                <input type="text" placeholder="Enter user name..." name="userName" [(ngModel)]="loginForm.userName"
+                    #userName="ngModel" required>
+                <div style="color: red;"
+                    *ngIf="userName.invalid && userName.hasError('required') && (userName.dirty || userName.touched)">
+                    Please enter user name.
+                </div>
+            </div>
+            <div>
+                <input type="password" placeholder="Enter password" name="password" [(ngModel)]="loginForm.password"
+                    #password="ngModel" required>
+                <div style="color: red;"
+                    *ngIf="password.invalid && password.hasError('required') && (password.dirty || password.touched)">
+                    Please enter password
+                </div>
+            </div>
+        </div>
+        <button [disabled]="userName.invalid || password.invalid" type="submit">Submit</button>
+    </form>
+</section>

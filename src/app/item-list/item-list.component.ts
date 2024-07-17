@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService } from './appServices/app.service';
 import { CommonModule } from '@angular/common';
-import { ItemDetailComponent } from '../item-detail/item-detail.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 @Component({
   selector: 'app-item-list',
   standalone: true,
+  providers: [AppService],
   imports: [CommonModule, ItemDetailComponent],
   templateUrl: './item-list.component.html',
   styleUrl: './item-list.component.scss'

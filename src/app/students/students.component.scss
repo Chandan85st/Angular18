@@ -1,0 +1,16 @@
+.table-top {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 10px;
+
+    select {
+        min-width: 100px;
+    }
+}
+
+.table th {
+    background-color: #717171;
+    color: #fff;
+    padding: 15px 10px;
+    font-weight: 400;
+}

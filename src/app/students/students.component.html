@@ -1,0 +1,44 @@
+<!-- <div class="table-top d-flex justify-content-between mt-5">
+    <div class="left d-flex align-items-center gap-2">Show
+        <select class="form-control">
+            <option>1</option>
+        </select> entries
+    </div>
+    <div class="right d-flex justify-content-end gap-3 align-items-center">
+        Search <input class="form-control" type="search">
+    </div>
+</div> -->
+<table class="table mt-0">
+    <thead>
+        <tr>
+            <th scope="col">Student Name</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Branch Name</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stu of itemData.slice(sliceStart, sliceEnd)">
+            <td scope="row">{{stu.studentName}}</td>
+            <td>{{stu.studentEmail}}</td>
+            <td>{{stu.studentBranch}}</td>
+            <td style="width: 180px;">
+                <button type="button" (click)="deleteStudent(stu.id)" class="btn btn-primary">Delete</button>
+                <button type="button" (click)="openDialog(stu)" class="btn btn-info mx-2">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="table-bottom d-flex justify-content-between">
+    <div class="left">Showing {{sliceStart}} to {{sliceEnd}} of {{itemData.length}} entries</div>
+    <div class="right d-flex justify-content-end">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item" (click)="paginationPrev()"><a class="page-link">Previous</a></li>
+                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+                <li class="page-item" (click)="paginationNext()"><a class="page-link">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

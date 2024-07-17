@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-between align-items-center form-head">
+    <h1 mat-dialog-title>Update</h1>
+    <button (click)="onNoClick()" mat-icon-button>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div mat-dialog-content>
+    <form (ngSubmit)="onSubmit()" [formGroup]="addStudentForm">
+        <div class="d-flex flex-column gap-3">
+
+            <div class="form-group d-flex flex-column gap-1">
+                <label for="student-name">Student Name</label>
+                <input class="form-control" id="student-name" type="text" formControlName="studentName">
+                <div
+                    *ngIf="addStudentForm.get('studentName')?.invalid && (addStudentForm.get('studentName')?.dirty || addStudentForm.get('studentName')?.touched)">
+                    <small class="text-danger" *ngIf="addStudentForm.get('studentName')?.errors?.['required']">Student
+                        Name is required.</small>
+                    <small class="text-danger" *ngIf="addStudentForm.get('studentName')?.errors?.['minlength']">Student
+                        Name must be at least 3 characters long.</small>
+                </div>
+            </div>
+
+
+            <!-- Student Email -->
+            <div class="form-group d-flex flex-column gap-1">
+                <label for="student-email">Student Email</label>
+                <input class="form-control" id="student-email" type="text" formControlName="studentEmail">
+                <div
+                    *ngIf="addStudentForm.get('studentEmail')?.invalid && (addStudentForm.get('studentEmail')?.dirty || addStudentForm.get('studentEmail')?.touched)">
+                    <small class="text-danger" *ngIf="addStudentForm.get('studentEmail')?.errors?.['required']">Student
+                        Email is required.</small>
+                    <small class="text-danger" *ngIf="addStudentForm.get('studentEmail')?.errors?.['email']">Invalid
+                        email format.</small>
+                </div>
+            </div>
+
+            <!-- Student Branch -->
+            <div class="form-group d-flex flex-column gap-1">
+                <label for="student-branch">Student Branch</label>
+                <select class="form-control" id="student-branch" formControlName="studentBranch">
+                    <option value="mca">MCA</option>
+                    <option value="mba">MBA</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bca">BCA</option>
+                    <option value="bba">BBA</option>
+                </select>
+                <div
+                    *ngIf="addStudentForm.get('studentBranch')?.invalid && (addStudentForm.get('studentBranch')?.dirty || addStudentForm.get('studentBranch')?.touched)">
+                    <small class="text-danger" *ngIf="addStudentForm.get('studentBranch')?.errors?.['required']">Student
+                        Branch is required.</small>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-width mt-4" [disabled]="!addStudentForm.valid">Submit</button>
+        </div>
+    </form>
+</div>
